@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommandBar+</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="icon.png" alt="CommandBar+" class="logo-img" width="30" height="30">
+            <h1>CommandBar+</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#">Features</a>
+            <a href="#">Download</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="hero-section">
+            <h1>CommandBar+</h1>
+            <p>The ultimate command bar for your browser.</p>
+            <a href="https://chromewebstore.google.com/detail/commandbar+/odlacblfdnnkoihbfbinbdbibfhnihfn" target="_blank">
+                <button class="download-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path fill="#4caf50" d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"></path><path fill="#ffc107" d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"></path><path fill="#4caf50" d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"></path><path fill="#ffc107" d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"></path><path fill="#f44336" d="M41.84,15H24v13l-3-1L7.16,13.26H7.14C10.68,7.69,16.91,4,24,4C31.8,4,38.55,8.48,41.84,15z"></path><path fill="#dd2c00" d="M7.158,13.264l8.843,14.862L21,27L7.158,13.264z"></path><path fill="#558b2f" d="M23.157,44l8.934-16.059L28,25L23.157,44z"></path><path fill="#f9a825" d="M41.865,15H24l-1.579,4.58L41.865,15z"></path><path fill="#fff" d="M33,24c0,4.969-4.031,9-9,9s-9-4.031-9-9s4.031-9,9-9S33,19.031,33,24z"></path><path fill="#2196f3" d="M31,24c0,3.867-3.133,7-7,7s-7-3.133-7-7s3.133-7,7-7S31,20.133,31,24z"></path>
+                    </svg>
+                    Add to Chrome - It's Free!
+                </button>
+            </a>
+        </div>
+        <div class="demo-section">
+            <div class="video-container">
+                <video src="demo.mp4" autoplay muted loop id="demo-video"></video>
+                <div class="video-controls">
+                    <button class="play-pause-btn" id="play-pause">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ffffff"><path d="M360-320h80v-320h-80v320Zm160 0h80v-320h-80v320ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+                    </button>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="features-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="ai-commands">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M331-651 211-771l57-57 120 120-57 57Zm149-95v-170h80v170h-80Zm291 535L651-331l57-57 120 120-57 57Zm-63-440-57-57 120-120 57 57-120 120Zm38 171v-80h170v80H746ZM205-92 92-205q-12-12-12-28t12-28l363-364q35-35 85-35t85 35q35 35 35 85t-35 85L261-92q-12 12-28 12t-28-12Zm279-335 84-85q12-12 12-28t-12-28q-12-12-28-12t-28 12l-85 85 57 56Z"/></svg>
+                    AI Assistant
+                </button>
+                <button class="tab-btn" data-tab="search-commands">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                    Smart Search
+                </button>
+                <button class="tab-btn" data-tab="organization-commands">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="m260-520 220-360 220 360H260ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-20v-320h320v320H120Z"/></svg>
+                    Productivity
+                </button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="ai-commands">
+                    <div class="feature-content">
+                        <div class="feature-text">
+                            <h3>AI-Powered Actions</h3>
+                            <p>Leverage AI to enhance your browsing experience with intelligent commands that understand context and provide smart suggestions.</p>
+                            <ul>
+                                <li>Ask AI questions about current page content</li>
+                                <li>Get intelligent summaries and explanations</li>
+                                <li>AI-powered search and navigation</li>
+                                <li>Smart command suggestions based on context</li>
+                            </ul>
+                        </div>
+                        <div class="feature-image">
+                            <img src="feature-1.png" alt="AI Assistant Feature">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="search-commands">
+                    <div class="feature-content">
+                        <div class="feature-text">
+                            <h3>Website Search & Navigation</h3>
+                            <p>Navigate websites efficiently with powerful search commands that help you find exactly what you're looking for.</p>
+                            <ul>
+                                <li>Search within any website instantly</li>
+                                <li>Navigate browser tabs and bookmarks</li>
+                                <li>Quick access to browser history</li>
+                                <li>Find and open specific pages</li>
+                            </ul>
+                        </div>
+                        <div class="feature-image">
+                            <img src="feature-2.png" alt="Smart Search Feature">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="organization-commands">
+                    <div class="feature-content">
+                        <div class="feature-text">
+                            <h3>Task & Organization Tools</h3>
+                            <p>Stay organized and productive with commands that help you manage tasks, bookmarks, and browser functionality.</p>
+                            <ul>
+                                <li>Manage bookmarks and favorites</li>
+                                <li>Organize browser tabs and windows</li>
+                                <li>Quick access to browser settings</li>
+                                <li>Task management and productivity tools</li>
+                            </ul>
+                        </div>
+                        <div class="feature-image">
+                            <img src="feature-3.png" alt="Productivity Feature">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-features-section">
+            <h2>More Features</h2>
+            <p>We have more features to help you browse faster and better.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#3b82f6"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                    </div>
+                    <h3>Sort Tabs</h3>
+                    <p>Organize and sort your browser tabs efficiently</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ef4444"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q54 0 104-17.5t92-50.5L228-676q-33 42-50.5 92T160-480q0 134 93 227t227 93Zm252-124q33-42 50.5-92T800-480q0-134-93-227t-227-93q-54 0-104 17.5T284-732l448 448Z"/></svg>
+                    </div>
+                    <h3>Block Websites</h3>
+                    <p>Block distracting websites to stay focused</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#8b5cf6"><path d="M480-120q-138 0-240.5-91.5T122-440h82q14 104 92.5 172T480-200q117 0 198.5-81.5T760-480q0-117-81.5-198.5T480-760q-69 0-129 32t-101 88h110v80H120v-240h80v94q51-64 124.5-99T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-120Zm112-192L440-464v-216h80v184l128 128-56 56Z"/></svg>
+                    </div>
+                    <h3>Explore History</h3>
+                    <p>Search and explore your browsing history</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#10b981"><path d="M160-360q-50 0-85-35t-35-85q0-50 35-85t85-35v-80q0-33 23.5-56.5T240-760h120q0-50 35-85t85-35q50 0 85 35t35 85h120q33 0 56.5 23.5T800-680v80q50 0 85 35t35 85q0 50-35 85t-85 35v160q0 33-23.5 56.5T720-120H240q-33 0-56.5-23.5T160-200v-160Zm200-80q25 0 42.5-17.5T420-500q0-25-17.5-42.5T360-560q-25 0-42.5 17.5T300-500q0 25 17.5 42.5T360-440Zm240 0q25 0 42.5-17.5T660-500q0-25-17.5-42.5T600-560q-25 0-42.5 17.5T540-500q0 25 17.5 42.5T600-440ZM320-280h320v-80H320v80Z"/></svg>
+                    </div>
+                    <h3>Ask Browser</h3>
+                    <p>Ask questions about your current browser state</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#f59e0b"><path d="m770-302-60-62q40-11 65-42.5t25-73.5q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 57-29.5 105T770-302ZM634-440l-80-80h86v80h-6ZM792-56 56-792l56-56 736 736-56 56ZM440-280H280q-83 0-141.5-58.5T80-480q0-69 42-123t108-71l74 74h-24q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h65l79 80H320Z"/></svg>
+                    </div>
+                    <h3>Shorten URLs</h3>
+                    <p>Generate QR codes and shorten URLs instantly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#06b6d4"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg>
+                    </div>
+                    <h3>Translate</h3>
+                    <p>Translate web content and text on the fly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ec4899"><path d="M480-280q83 0 141.5-58.5T680-480q0-83-58.5-141.5T480-680q-83 0-141.5 58.5T280-480q0 83 58.5 141.5T480-280Zm0 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                    </div>
+                    <h3>Record Screen</h3>
+                    <p>Capture and record your screen activities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#6366f1"><path d="M160-200q-33 0-56.5-23.5T80-280v-400q0-33 23.5-56.5T160-760h640q33 0 56.5 23.5T880-680v400q0 33-23.5 56.5T800-200H160Zm160-120h320v-80H320v80ZM200-440h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80ZM200-560h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Zm120 0h80v-80h-80v80Z"/></svg>
+                    </div>
+                    <h3>Keyboard Navigation</h3>
+                    <p>Navigate everything with keyboard shortcuts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#f97316"><path d="M400-80v-320H280v-480h400l-80 280h160L400-80Z"/></svg>
+                    </div>
+                    <h3>Lightweight</h3>
+                    <p>Fast and efficient browser extension</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
